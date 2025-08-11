@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Pagos</title>
+    <style>
+        /* Font imports and base styles */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #3a86ff;
+            --secondary: #8338ec;
+            --success: #06d6a0;
+            --warning: #ffbe0b;
+            --danger: #ef476f;
+            --dark: #212529;
+            --light: #f8f9fa;
+            --border-radius: 12px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            min-height: 100vh;
+            padding: 2rem;
+            color: var(--dark);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header styles */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            color: #6c757d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Payment options section */
+        .payment-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .payment-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .payment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        .payment-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .payment-card .icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .bank-icon {
+            background-color: #f0f8ff;
+            color: var(--primary);
+        }
+        
+        .international-icon {
+            background-color: #f5f0ff;
+            color: var(--secondary);
+        }
+        
+        .payment-details {
+            margin-top: 1.5rem;
+        }
+        
+        .payment-row {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        
+        .payment-label {
+            font-weight: 500;
+            min-width: 120px;
+            color: #495057;
+        }
+        
+        .payment-value {
+            font-weight: 600;
+            word-break: break-all;
+        }
+        
+        /* Copy button styles */
+        .copy-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            transition: background-color 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .copy-btn:hover {
+            background-color: #2979ff;
+        }
+        
+        /* Instructions section */
+        .instructions {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 3rem;
+        }
+        
+        .instructions h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .instructions ol {
+            padding-left: 1.5rem;
+        }
+        
+        .instructions li {
+            margin-bottom: 0.75rem;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: #6c757d;
+            padding: 2rem 0;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .payment-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+<style type="text/css">
+.grande { font-size: 60px; }
+</style>
+<script>
+// Escribir aqui el código Javascript
+</script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Información de Pagos</h1>
+            <p>Aquí encontrarás todos los detalles necesarios para realizar tu pago, ya sea mediante transferencia bancaria en Ecuador o métodos internacionales.</p>
+        </header>
+        
+        <section class="payment-options">
+            <!-- Banco Pichincha -->
+            <div class="payment-card">
+                <h2>
+    <img src="https://play-lh.googleusercontent.com/Ma1NGNRR9qTl2N-TFuFFF2Htkk3vVWKmUh9b9C_lyIS6PxWkbKaAEz2o5cACGXI7lgc" alt="Banco Pichincha" style="width:24px; height:24px; border-radius:50%; object-fit:cover; vertical-align:middle; margin-right:8px;">
+    Banco Pichincha
+</h2>
+                <div class="payment-details">
+                    <div class="payment-row">
+                        <div class="payment-label">Tipo de Cuenta:</div>
+                        <div class="payment-value">Corriente</div>
+                    </div>
+                    <div class="payment-row">
+                        <div class="payment-label">Nombre:</div>
+                        <div class="payment-value">WILSON ARIEL ORTEGA RODRIGUEZ</div>
+                    </div>
+                    <div class="payment-row">
+                        <div class="payment-label">Número de Cuenta: </div>
+                        <div class="payment-value">2208555505</div>
+                    </div>
+                    <div class="payment-row">
+                        <div class="payment-label">Cédula/RUC:</div>
+                        <div class="payment-value">0706407004</div>
+                    </div>
+                    <div class="payment-row">
+                        <div class="payment-label">Email:</div>
+                        <div class="payment-value">wilson13_ortega2003@hotmail.com</div>
+                    </div>
+                    <button class="copy-btn" onclick="copyToClipboard('2208555505')">Copiar Número de Cuenta</button>
+                </div>
+            </div>
+            
+            <!-- Banco del Pacífico -->
+            <div class="payment-card">
+                <h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnuwOHSL0ynnMxg8ZidjwAUu7COeTKlFuDjw&amp;s" alt="Banco Pichincha" style="width:24px; height:24px; border-radius:50%; object-fit:cover; vertical-align:middle; margin-right:8px;">
+    Banco del Pacífico
+</h2>
+
+                <div class="payment-details">
+                    <div class="payment-row">
+                        <div class="payment-label">Tipo de Cuenta:</div>
+                        <div class="payment-value">Ahorros</div>
+                    </div>
+                    <div class="payment-row">
+                        <div class="payment-label">Nombre:</div>
+                        <div class="payment-value">WILSON ARIEL ORTEGA RODRIGUEZ</div>
+                    </div>
+                    <div class="payment-row">
+                        <div class="payment-label">Número de Cuenta:</div>
+                        <div class="payment-value">1064648176</div>
+                    </div>
+                    <div class="payment-row">
+                        <div class="payment-label">Cédula/RUC:</div>
+                        <div class="payment-value">0706407004</div>
+                    </div>
+                    <div class="payment-row">
+                        <div class="payment-label">Email:</div>
+                        <div class="payment-value">wilson13_ortega2003@hotmail.com</div>
+                    </div>
+                    <button class="copy-btn" onclick="copyToClipboard('1064648176')">Copiar Número de Cuenta</button>
+                </div>
+            </div>
+            
+            <!-- Banco Bolivariano -->
+            <div class="payment-card">
+                <h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFHLLwfSIY5H9r467JZU1MMsBd1HBM-QoeCA&amp;s" alt="Banco Pichincha" style="width:24px; height:24px; border-radius:50%; object-fit:cover; vertical-align:middle; margin-right:8px;">
+    Banco Bolivariano
+</h2>
+
+                <div class="payment-details">
+                    <div class="payment-row">
+                        <div class="payment-label">Tipo de Cuenta:</div>
+                        <div class="payment-value">Corriente</div>
+                    </div>
+                    <div class="payment-row">
+                        <div class="payment-label">Nombre:</div>
+                        <div class="payment-value">WILSON ARIEL ORTEGA RODRIGUEZ</div>
+                    </div>
+                    <div class="payment-row">
+                        <div class="payment-label">Número de Cuenta:</div>
+                        <div class="payment-value">3001338997</div>
+                    </div>
+                    <div class="payment-row">
+                        <div class="payment-label">Cédula/RUC:</div>
+                        <div class="payment-value">0706407004</div>
+                    </div>
+                    <div class="payment-row">
+                        <div class="payment-label">Email:</div>
+                        <div class="payment-value">wilson13_ortega2003@hotmail.com</div>
+                    </div>
+                    <button class="copy-btn" onclick="copyToClipboard('3001338997')">Copiar Número de Cuenta</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="payment-options">
+            <!-- PayPal -->
+            <div class="payment-card">
+                <h2>
+    <img src="https://w7.pngwing.com/pngs/720/939/png-transparent-paypal-computer-icons-logo-paypal-blue-angle-service-thumbnail.png" alt="Banco Pichincha" style="width:24px; height:24px; border-radius:50%; object-fit:cover; vertical-align:middle; margin-right:8px;">
+    Paypal
+</h2>
+
+                <div class="payment-details">
+                    <div class="payment-row">
+                        <div class="payment-label">Email:</div>
+                        <div class="payment-value">wilson13_ortega2003@hotmail.com</div>
+                    </div>
+                    <div class="payment-row">
+                        <div class="payment-label">Enlace directo:</div>
+                        <div class="payment-value">paypal.me/wilsonortega2003</div>
+                    </div>
+                    <button class="copy-btn" onclick="copyToClipboard('wilson13_ortega2003@hotmail.com')">Copiar Email</button>
+                    <button class="copy-btn" onclick="copyToClipboard('paypal.me/wilsonortega2003')" style="background-color: var(--secondary); margin-left: 0.5rem;">Copiar Enlace</button>
+                </div>
+            </div>
+            
+            <!-- Skrill -->
+            <div class="payment-card">
+                <h2>
+    <img src="https://w7.pngwing.com/pngs/306/588/png-transparent-skrill-cryptocurrencies-icon.png" alt="Banco Pichincha" style="width:24px; height:24px; border-radius:50%; object-fit:cover; vertical-align:middle; margin-right:8px;">
+    Skrill
+</h2>
+
+                <div class="payment-details">
+                    <div class="payment-row">
+                        <div class="payment-label">Email:</div>
+                        <div class="payment-value">wilson13_ortega2003@hotmail.com</div>
+                    </div>
+                    <div class="payment-row">
+                        <div class="payment-label">ID de Skrill:</div>
+                        <div class="payment-value">192521681</div>
+                    </div>
+                    <button class="copy-btn" onclick="copyToClipboard('wilson13_ortega2003@hotmail.com')">Copiar Email</button>
+                    <button class="copy-btn" onclick="copyToClipboard('192521681')" style="background-color: var(--secondary); margin-left: 0.5rem;">Copiar ID</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="instructions">
+            <h2>Instrucciones para realizar el pago</h2>
+            <ol>
+                <li>Para transferencias nacionales en Ecuador: utiliza cualquiera de los bancos listados arriba y envía el monto correspondiente.</li>
+                <li>Para pagos internacionales: utiliza PayPal o Skrill siguiendo los datos proporcionados.</li>
+                <li>Después de realizar el pago, envía el comprobante al correo o número de WhatsApp proporcionado.</li>
+                <li>Los pagos pueden demorar hasta 24 horas en ser procesados (transferencias nacionales) o 48 horas (transferencias internacionales).</li>
+                <li>Para cualquier duda o problema con tu pago, contáctanos inmediatamente.</li>
+            </ol>
+        </section>
+        
+        <footer class="footer">
+            <p>© 2023 Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert(`¡Copiado al portapapeles: ${text}`);
+            }).catch(err => {
+                console.error('Error al copiar: ', err);
+                // Fallback for older browsers
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                alert(`¡Copiado al portapeles: ${text}`);
+            });
+        }
+    </script>
+
+
+
+</body></html>
